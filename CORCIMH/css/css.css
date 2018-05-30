@@ -141,11 +141,32 @@ h1 {
 
 }
 
+.col-xs-4 {
+	height: 550px;
+	background-color: #FFF;
+	overflow: scroll;
+
+}
+
+.col-xs-5 {
+	height: 550px;
+	background-color: #FFF;
+	overflow: scroll;
+
+}
+
 .col-xs-6 {
 	height: 550px;
 	background-color: #FFF;
 	overflow: scroll;
-	overflow-x: hidden;
+
+
+}
+
+.col-xs-7 {
+	height: 550px;
+	background-color: #FFF;
+	overflow: scroll;
 
 }
 
