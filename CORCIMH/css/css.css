@@ -11,7 +11,7 @@ body {
 }
 
 .jumbotron {
-	background-image: url(../images/main.jpg);
+	background-image: url(../images/001r.jpg);
 	height: 600px;
 }
 
@@ -21,7 +21,7 @@ body {
 	border: none;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 700;
-	color: #de6e33;
+	color: #000000;
 	letter-spacing: 3px;
 	font-size: 24px;
 }
@@ -103,7 +103,8 @@ h1 {
 #diss {
 	background-image: url(../images/paper.jpg);
 	padding-top: 30px;
-	padding-bottom: 50px;	
+	padding-bottom: 50px;
+    	
 }
 
 #diss p {
@@ -173,4 +174,9 @@ h1 {
 h4 {
 	color:#de6e33;
 	font-size: 36px;
+}
+
+h5 {
+	color:#293954;
+	font-size: 18px;
 }
