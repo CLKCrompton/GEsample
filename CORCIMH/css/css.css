@@ -162,7 +162,7 @@ h1 {
 .col-xs-4 {
 	height: 550px;
 	background-color: #FFF;
-	overflow: scroll;
+	overflow: auto;
 
 }
 
