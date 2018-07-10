@@ -163,6 +163,7 @@ h1 {
 	height: 550px;
 	background-color: #FFF;
 	overflow: auto;
+	padding-top: 5px;
 
 }
 
@@ -196,4 +197,24 @@ h4 {
 h5 {
 	color:#293954;
 	font-size: 18px;
+}
+
+/* unvisited link */
+a:link {
+    color: #293954;
+}
+
+/* visited link */
+a:visited {
+    color: #293954;
+}
+
+/* mouse over link */
+a:hover {
+    color: #293954;
+}
+
+/* selected link */
+a:active {
+    color: #293954;
 }
