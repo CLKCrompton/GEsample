@@ -220,3 +220,7 @@ a:hover {
 a:active {
     color: #293954;
 }
+
+a {
+    text-decoration: none !important;
+}
