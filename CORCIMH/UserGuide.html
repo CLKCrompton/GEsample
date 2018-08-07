@@ -49,39 +49,789 @@ $(document).ready(function(){
         <div class="row">
         <div class="col-xs-12">
 
-          <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">APARTADO</th>
-      <th scope="col">CASO</th>
-      <th scope="col">TRANSCRIPCIÓN PALEOGRÁFICA</th>
-      <th scope="col">EJEMPLO TP</th>
-      <th scope="col">EDICIÓN CRÍTICA</th>
-      <th scope="col">EJEMPLO EC</th>
-    
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+   <TABLE>
+    <TABLE BORDER="5"    WIDTH="100%"   CELLPADDING="4" CELLSPACING="3">
+   <TR>
+      <TH COLSPAN="2"><BR><H3>Criterios por apartados</H3>
+      </TH>
+   <TR>
+      <TD>APARTADO</TD>
+      <TD>CASO</TD>
+      <TD>TRANSCRIPCIÓN PALEOGRÁFICA</TD>
+      <TD>EJEMPLO TP</TD>
+      <TD>EDICIÓN CRÍTICA</TD>
+      <TD>EJEMPLO EC</TD>
+   </TR>
+     <TR>
+      <TD>ELEMENTOS CODICOLÓGICOS Y PALEOGRÁFICOS</TD>
+      <TD>N.º folio y columna</TD>
+      <TD>[fol. + n.º + r/v; col. + A/B/C...]</TD>
+      <TD>[fol. 24v; col. B]</TD>
+      <TD>[fol. + n.º + r/v; col. + A/B/C...]</TD>
+      <TD>[fol. 24v; col. B]</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>N.º línea</TD>
+      <TD>Se respeta la disposición original, pero no se indica el n.º</TD>
+      <TD>Natural co-sa es de cob-diciar los omnes saber</TD>
+      <TD>No se respeta la disposición original ni se indica el número</TD>
+      <TD>Natural cosa es de cobdiciar los omnes saber</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Disposición del texto en bloques</TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD>Se adecua a la puntuación en párrafos, según el sentido</TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Letra/s ilegible/s</TD>
+      <TD>La/s letra/s ilegible/s se encierra/n entre { }, se indica la causa de la ilegibilidad en cursiva, seguido de :, y por cada una de las letras se escribe el signo ?</TD>
+      <TD>Ca dizen que si {roto:??}das las cortinas  </TD>
+      <TD>La/s letra/s ilegible/s se encierra/n entre { }, se indica la causa de la ilegibilidad en cursiva, seguido de :, y por cada una de las letras se escribe el signo ?
+<font color="purple">Nota para la edición digital: la causa de la ilegibilidad aparecerá como nota, pero no se verá en el propio texto.</font>
+</TD>
+      <TD>Ca dizen que si {roto: ??}das las cortinas / 
+
+
+Ed. digital: 
+
+Ca dizen que si {??}das las cortinas  
+</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Segmento ilegible</TD>
+      <TD>Si no se sabe cuántas letras ilegibles, se sigue la misma estructura que en el punto anterior, pero se escribe ¿?</TD>
+      <TD>otrossi {roto:¿?} que si estidiessen</TD>
+      <TD>Si no se sabe cuántas letras ilegibles, se sigue la misma estructura que en el punto anterior, pero se escribe ¿?
+<font color="purple">Nota para la edición digital: la causa de la ilegibilidad aparecerá como nota, pero no se verá en el propio texto.</font>
+</TD>
+      <TD>otrossi {roto: ¿?} que si estidiessen /
+
+
+Ed. digital: 
+
+otrossi {¿?} que si estidiessen
+</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Intervención del copista en el texto (tachado, raspado, sobrepuesto, etc.). </TD>
+      <TD>Se indica el tipo de intervención en cursiva y entre ( ). Si el texto es legible, se añade tras :</TD>
+      <TD>Achitab (tachado: Achitob)</TD>
+      <TD>Se indica el tipo de intervención en cursiva y entre ( ). Si el texto es legible, se añade tras :
+<font color="purple">Nota para la edición digital: la intervención del copista aparecerá como nota, pero no se verá en el propio texto, que solo reflejará el resultado final de dicha intervención.</font>
+</TD>
+      <TD>Achitab (tachado: Achitob) /
+
+
+Ed. digital: 
+
+Achitab 
+</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Error del copista</TD>
+      <TD>(sic)</TD>
+      <TD>non pueden los omnes
+seer (sic) el comienço
+</TD>
+      <TD>(sic)</TD>
+      <TD>non pueden los omnes
+seer (sic) el comienço
+</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Anotación interlineal o marginal del copista</TD>
+      <TD>Entre < ></TD>
+      <TD>< E >t esto fizieron</TD>
+      <TD>No se señala</TD>
+      <TD>en medio del paraíso < crió > ell árvol de la vida</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Lectura insegura o hipotética</TD>
+      <TD>Si se hace una lectura conjeturada, esta se encierra entre { }</TD>
+      <TD>ca{mbjast}eis</TD>
+      <TD>Si se hace una lectura conjeturada, esta se encierra entre { }</TD>
+      <TD>ca{mbiast}eis</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Rúbrica</TD>
+      <TD>Se escribe en negro.
+<font color="purple">Nota para la edición digital: Se escribe con color rojo</font>
+</TD>
+      <TD><font color="red">Aqui se comiença
+la general e grand es-</font>
+
+</TD>
+      <TD>Se escribe con color  negro</TD>
+      <TD>Aquí se comiença la General e Grand Estoria </TD>
+   </TR>
+   <TR>
+      <TD>"</TD>
+      <TD>Signos o elementos especiales (blanco, cruz, crismón, sello, etc.)</TD>
+      <TD>Se indica mediante una palabra descriptiva en cursiva, encerrada entre ( )</TD>
+      <TD>(cruz) los sanctos</TD>
+      <TD>Se indica mediante una palabra descriptiva en cursiva, encerrada entre ( )</TD>
+      <TD>(cruz) Los sanctos</TD>
+   </TR>
+     <TR>
+      <TD>ABREVIATURAS</TD>
+      <TD>Letras abreviadas</TD>
+      <TD>En cursiva</TD>
+      <TD>omne</TD>
+      <TD>No se señala</TD>
+      <TD>omne</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Letras sobrevoladas</TD>
+      <TD>En superíndice</TD>
+      <TD>qu<sup>i</sup>en</TD>
+      <TD>No se señala</TD>
+      <TD>quien</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Abreviatura formada por una cifra seguida de letras</TD>
+      <TD>No se desarrolla</TD>
+      <TD>7re </TD>
+      <TD>Se desarrolla en redonda</TD>
+      <TD>septiembre</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Abreviatura idéntica en latín y romance</TD>
+      <TD>Se desarrolla en cursiva, según el idioma</TD>
+      <TD>gr<i>atj</i>a</TD>
+      <TD>Se desarrolla en redonda, según el idioma</TD>
+      <TD>gracia</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Signo tironiano</TD>
+      <TD>&</TD>
+      <TD>apartadas & ayuntadas</TD>
+      <TD>e</TD>
+      <TD>apartadas e ayuntadas</TD>
+   </TR>
+     <TR>
+      <TD>GRAFÍAS</TD>
+      <TD>Distintos tipos de d</TD>
+      <TD>d</TD>
+      <TD>d</TD>
+      <TD>d</TD>
+      <TD>d</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Distintos tipos de r</TD>
+      <TD>r</TD>
+      <TD>r</TD>
+      <TD>r</TD>
+      <TD>r</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Distintos tipos de s</TD>
+      <TD>s</TD>
+      <TD>s</TD>
+      <TD>s</TD>
+      <TD>s</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Distintos tipos de z</TD>
+      <TD>z</TD>
+      <TD>z</TD>
+      <TD>z</TD>
+      <TD>z</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Distintos tipos de v</TD>
+      <TD>v</TD>
+      <TD>v</TD>
+      <TD>v</TD>
+      <TD>v</TD>
+   </TR>
+   <TR>
+      <TD>"</TD>
+      <TD>Posibles diptongos representados con i o u</TD>
+      <TD>No se repone la otra vocal</TD>
+      <TD>çilo [por cielo]</TD>
+      <TD>No se repone la otra vocal</TD>
+      <TD>cilo [por cielo]</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Apócope</TD>
+      <TD>No se repone el valor apocopado</TD>
+      <TD>delant</TD>
+      <TD>No se repone el valor apocopado</TD>
+      <TD>delant</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Pérdida de vocal en contacto entre vocal final e inicial de palabras</TD>
+      <TD>No se señala</TD>
+      <TD>contral</TD>
+      <TD>Se indica con apóstrofo</TD>
+      <TD>contra’l</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Fusión de dos vocales iguales en contacto</TD>
+      <TD>No se señala</TD>
+      <TD>sobrellos</TD>
+      <TD>No se señala</TD>
+      <TD>sobrellos</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Pronombre enclítico apocopado</TD>
+      <TD>No se señala</TD>
+      <TD>mandol</TD>
+      <TD>Se indica con punto medio</TD>
+      <TD>mando·l</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>j con valor vocálico</TD>
+      <TD>Se respeta</TD>
+      <TD>djze</TD>
+      <TD>i</TD>
+      <TD>dize</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>y con valor vocálico</TD>
+      <TD>Se respeta</TD>
+      <TD>donayre</TD>
+      <TD>i</TD>
+      <TD>donaire</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>-i / -y finales</TD>
+      <TD>Se respeta</TD>
+      <TD>soi / fuy</TD>
+      <TD>-y / -i, según uso actual</TD>
+      <TD>soy / fui</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>v con valor vocálico</TD>
+      <TD>Se respeta</TD>
+      <TD>vno</TD>
+      <TD>u</TD>
+      <TD>uno</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>b con posible valor semivocálico de wau</TD>
+      <TD>Se respeta</TD>
+      <TD>recabdador</TD>
+      <TD>Se respeta</TD>
+      <TD>recabdador</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>i con valor consonántico</TD>
+      <TD>Se respeta</TD>
+      <TD>iuda</TD>
+      <TD>Se respeta</TD>
+      <TD>Iuda</TD>
+   </TR>
+   <TR>
+      <TD>"</TD>
+      <TD>u con valor consonántico</TD>
+      <TD>Se respeta</TD>
+      <TD>feruor</TD>
+      <TD>v</TD>
+      <TD>fervor</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>ç seguida de vocal palatal</TD>
+      <TD>Se respeta</TD>
+      <TD>aborreçes</TD>
+      <TD>c</TD>
+      <TD>aborreces</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>sc o sç seguida de vocal palatal</TD>
+      <TD>Se respeta</TD>
+      <TD>paresce</TD>
+      <TD>sc</TD>
+      <TD>paresce</TD>
+   </TR>
+     <TR>
+     <TD>"</TD>
+      <TD>sz seguida de vocal palatal</TD>
+      <TD>Se respeta</TD>
+      <TD>padeszer</TD>
+      <TD>Se respeta</TD>
+      <TD>padeszer</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>ç seguida de vocal no palatal</TD>
+      <TD>Se respeta</TD>
+      <TD>abraça</TD>
+      <TD>Se respeta</TD>
+      <TD>abraça</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>ç seguida de vibrante (en resultados de síncopa)</TD>
+      <TD>Se respeta</TD>
+      <TD>aborresçra</TD>
+      <TD>Se respeta</TD>
+      <TD>aborresçrá</TD>
+   </TR>
+     <TR>
+     <TD>"</TD>
+      <TD>-ff- intervocálica</TD>
+      <TD>Se respeta</TD>
+      <TD>eleffant</TD>
+      <TD>Se respeta</TD>
+      <TD>eleffant</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>ff no intervocálica</TD>
+      <TD>Se respeta</TD>
+      <TD>emffermedad</TD>
+      <TD>f</TD>
+      <TD>enfermedad</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>ph con valor de f</TD>
+      <TD>Se respeta</TD>
+      <TD>agiographo</TD>
+      <TD>Se respeta</TD>
+      <TD>agiógrapho</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>h expletiva</TD>
+      <TD>Se respeta</TD>
+      <TD>acahesçe</TD>
+      <TD>Se respeta</TD>
+      <TD>acahesce</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>k</TD>
+      <TD>Se respeta</TD>
+      <TD>Kapadoçia</TD>
+      <TD>Se respeta</TD>
+      <TD>Kapadocia</TD>
+   </TR>
+   <TR>
+      <TD>"</TD>
+      <TD>ch con valor de velar oclusiva sorda</TD>
+      <TD>Se respeta</TD>
+      <TD>charta</TD>
+      <TD>Se respeta</TD>
+      <TD>charta</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>qu seguida de vocal no palatal, en contexto romance</TD>
+      <TD>Se respeta</TD>
+      <TD>quando</TD>
+      <TD>cu</TD>
+      <TD>cuando</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>l con valor de ll</TD>
+      <TD>Se respeta</TD>
+      <TD>lamandolas</TD>
+      <TD>Se respeta</TD>
+      <TD>lamándolas</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>-ll</TD>
+      <TD>Se respeta</TD>
+      <TD>aquell</TD>
+      <TD>Se respeta</TD>
+      <TD>aquell</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>ll no intervocálica y no final de palabra</TD>
+      <TD>Se respeta</TD>
+      <TD>alltar</TD>
+      <TD>l</TD>
+      <TD>altar</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Nasal ante b o p</TD>
+      <TD>n o m, en función de la frecuencia de uso de la palabra concreta sin abreviar</TD>
+      <TD>canbjar</TD>
+      <TD>m</TD>
+      <TD>cambiar</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>Nasal ante no bilabial</TD>
+      <TD>Se respeta</TD>
+      <TD>çircumdamiento / entemder</TD>
+      <TD>Se respeta o no, en función del étimo</TD>
+      <TD>circumdamiento / entender</TD>
+   </TR>
+     <TR>
+      <TD>"</TD>
+      <TD>-m final de palabra</TD>
+      <TD>Se respeta</TD>
+      <TD>adam</TD>
+      <TD>Se respeta</TD>
+      <TD>Adam</TD>
+   </TR>
+     <TR>
+       <TD>"</TD>
+      <TD>Palatal nasal -nn-</TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+       <TD>"</TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+   <TR>
+       <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+          <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+       <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+       <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+   <TR>
+       <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+        <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+       <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+       <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+   <TR>
+       <TD></TD>
+      <TD></TD>
+      <TD>Se respeta</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+   <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+   <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+     <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+   </TR>
+</TABLE>
         
 
         </div><!-- end of row-->

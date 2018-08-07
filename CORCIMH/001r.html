@@ -422,7 +422,7 @@ Sed molestie ligula eget imperdiet placerat. Etiam semper tellus dui, in consect
 			var noteTab = $(this).attr('data-tab');
 
 			// step 1: open the tab which corresponds to the note
-			$('data-tab-name[' + noteTab + ']').show();
+			$('data-tab-name[' + noteTab + ']').tab('show');
 
 			// step 2: use our scrollTo function to jump to that note
 			scrollTo($this.attr('href'));

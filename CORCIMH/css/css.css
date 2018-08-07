@@ -224,3 +224,10 @@ a:active {
 a {
     text-decoration: none !important;
 }
+
+th, td {
+    text-align: left;
+    color:#de6e33;
+	font-size: 14px;
+	padding: 5px;
+}
