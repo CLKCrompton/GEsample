@@ -222,7 +222,8 @@ a:active {
 }
 
 a {
-    text-decoration: none !important;
+    color: inherit;
+    
 }
 
 th, td {

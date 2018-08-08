@@ -6,15 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/css.css" rel="stylesheet" type=text/css>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 <!-- enables popovers for abreviations -->
      <script>
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover();
 });
 </script>
+
+<style type="text/css">
+body, html, .main {
+    height: 100%;
+}
+</style>
+
+<!--
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+-->
 
 
     <title>Confluence of Religious Culture in Medieval Historiography</title>
@@ -349,8 +360,16 @@ Sed molestie ligula eget imperdiet placerat. Etiam semper tellus dui, in consect
 <script type="text/javascript">
  	$("document").ready(function()  {
 		function scrollTo(hash) {
+
+			$('html, body').animate({
+				scrollTop: $('[name="' + hash + '"]').offset().top
+			}, 800, function() {
+
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
 			location.hash = hash;
-		}
+		});
+	}
 
 		// Show A/B/C notes
 		$('.filter-abc').on('click', function(event) {
@@ -419,18 +438,21 @@ Sed molestie ligula eget imperdiet placerat. Etiam semper tellus dui, in consect
 		$(noteButton).on('click', function(event) {
 			// This is a variable that tells us what tab this note resides in
 			// In this eexample, it's the "notas" tab
-			var noteTab = $(this).attr('data-tab');
+			var noteTab				= $(this).attr('data-tab');
+			var noteTab_selector	= '[data-tab-name="' + noteTab + '"]';
+			var anchor				= $(this).attr('href').slice(1);
+			var anchor_selector		= 'a[name="' + anchor + '"]';
+
+			event.preventDefault();
 
 			// step 1: open the tab which corresponds to the note
-			$('data-tab-name[' + noteTab + ']').tab('show');
+			$(noteTab_selector).tab('show');
 
 			// step 2: use our scrollTo function to jump to that note
-			scrollTo($this.attr('href'));
+			scrollTo(anchor);
 		});
 
  	 });
  	</script>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 
 </html>
