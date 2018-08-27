@@ -215,8 +215,7 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-    color: #293954;
-    text-decoration: none;
+    color: #0000FF
 }
 
 /* selected link */
